@@ -1,0 +1,1131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description"
+content="Yves Chester V. Ybanez — Real Estate Virtual Assistant portfolio featuring CRM, property analysis, transaction coordination, reporting and follow-up demo projects.">
+
+<title>Yves Chester V. Ybanez | Real Estate Virtual Assistant</title>
+
+<style>
+:root{
+  --navy:#0c2949;
+  --blue:#0755a3;
+  --lightblue:#eaf3fc;
+  --text:#122d4b;
+  --muted:#405670;
+  --border:#d8e4ef;
+  --white:#fff;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#f6faff;
+  line-height:1.5;
+}
+
+a{color:var(--blue)}
+
+a:focus-visible{
+  outline:3px solid #1b7fd1;
+  outline-offset:3px;
+}
+
+.container{
+  width:min(1390px,94%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  background:rgba(248,252,255,.96);
+  border-bottom:1px solid #dce7f1;
+  position:sticky;
+  top:0;
+  z-index:20;
+  backdrop-filter:blur(10px);
+}
+
+.nav{
+  min-height:74px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.brand{
+  color:var(--navy);
+  text-decoration:none;
+  font-size:20px;
+  font-weight:800;
+  line-height:1.25;
+}
+
+.brand small{
+  display:block;
+  margin-top:5px;
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:600;
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:27px;
+  flex-wrap:wrap;
+}
+
+.navlinks a{
+  text-decoration:none;
+  color:var(--navy);
+  font-size:14px;
+}
+
+.navlinks a:hover{
+  color:var(--blue);
+}
+
+.navlinks a:first-child{
+  color:var(--blue);
+  font-weight:bold;
+}
+
+.nav-cta{
+  background:#0755a3;
+  color:#fff;
+  padding:12px 19px;
+  border-radius:7px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(232,243,253,.96) 0%,
+      rgba(229,242,254,.88) 38%,
+      rgba(220,237,251,.53) 67%,
+      rgba(203,225,244,.22) 100%
+    ),
+    url("real-estate-bg.jpg")
+    center center/cover no-repeat;
+  padding:35px 0 42px;
+  scroll-margin-top:80px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:
+    minmax(0,1.55fr)
+    minmax(190px,.6fr)
+    minmax(210px,.65fr);
+  gap:30px;
+  align-items:center;
+}
+
+.eyebrow{
+  font-size:13px;
+  letter-spacing:3px;
+  font-weight:bold;
+  color:var(--navy);
+  text-transform:uppercase;
+}
+
+.hero h1{
+  font-size:clamp(32px,3.6vw,54px);
+  line-height:1.12;
+  letter-spacing:-1.5px;
+  color:#092745;
+  margin:15px 0 8px;
+}
+
+.hero h2{
+  font-size:clamp(17px,1.6vw,23px);
+  margin:0 0 15px;
+  color:var(--navy);
+  line-height:1.4;
+}
+
+.hero p{
+  font-size:16px;
+  color:#19334e;
+  max-width:650px;
+  margin:0 0 18px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+  border:1px solid var(--blue);
+  transition:transform .2s,box-shadow .2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,40,90,.15);
+}
+
+.btn-primary{
+  background:var(--blue);
+  color:#fff;
+}
+
+.btn-outline{
+  background:rgba(255,255,255,.92);
+  color:var(--navy);
+}
+
+.btn-cv{
+  background:#0c2949;
+  color:white;
+  border-color:#0c2949;
+}
+
+/* PORTRAIT */
+
+.portrait{
+  border:3px solid rgba(255,255,255,.95);
+  border-radius:19px;
+  overflow:hidden;
+  box-shadow:0 9px 25px rgba(14,48,85,.27);
+  background:#a5adba;
+}
+
+.portrait img{
+  width:100%;
+  height:330px;
+  display:block;
+  object-fit:cover;
+  object-position:center top;
+}
+
+/* HERO SERVICES PANEL */
+
+.services-panel{
+  background:rgba(255,255,255,.84);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.95);
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(16,55,96,.12);
+  padding:17px;
+}
+
+.service{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:9px 2px;
+  color:var(--navy);
+  font-size:13px;
+}
+
+.service-icon{
+  display:inline-flex;
+  width:28px;
+  justify-content:center;
+  font-size:20px;
+  flex-shrink:0;
+}
+
+/* PROJECTS */
+
+.projects{
+  background:
+    linear-gradient(
+      110deg,
+      rgba(250,252,255,.96),
+      rgba(233,243,252,.88)
+    );
+  padding:25px 0 30px;
+}
+
+section{
+  scroll-margin-top:90px;
+}
+
+.section-title{
+  font-size:29px;
+  line-height:1.2;
+  margin:0 0 10px;
+  color:var(--navy);
+  letter-spacing:-.6px;
+}
+
+.section-title:after{
+  content:"";
+  display:block;
+  width:44px;
+  height:3px;
+  margin-top:8px;
+  background:#1174d3;
+}
+
+.project-heading{
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  align-items:center;
+}
+
+.project-heading p{
+  max-width:770px;
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.project-note{
+  color:#33649a;
+  font-style:italic;
+  font-size:21px;
+  text-align:center;
+  line-height:1.2;
+  transform:rotate(-5deg);
+  padding-right:25px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+  margin-top:22px;
+}
+
+.project-card{
+  min-width:0;
+  background:rgba(255,255,255,.96);
+  border:1px solid #dce7f2;
+  border-radius:9px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(12,41,73,.11);
+  display:flex;
+  flex-direction:column;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.project-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(12,41,73,.16);
+}
+
+.project-preview{
+  position:relative;
+  height:112px;
+  overflow:hidden;
+  background:linear-gradient(125deg,#0d2946,#1c5a91);
+  padding:12px;
+}
+
+.project-preview:before{
+  content:"";
+  display:block;
+  height:9px;
+  border-radius:4px 4px 0 0;
+  background:#112e4d;
+  box-shadow:0 12px 0 #f3f7fb;
+}
+
+.preview-ui{
+  margin-top:19px;
+  height:65px;
+  display:grid;
+  grid-template-columns:24% 1fr;
+  gap:6px;
+}
+
+.preview-sidebar{
+  background:#0b2541;
+  border-radius:3px;
+}
+
+.preview-content{
+  background:#edf4fa;
+  border-radius:3px;
+  padding:7px;
+}
+
+.preview-bars{
+  display:flex;
+  gap:5px;
+  align-items:end;
+  height:100%;
+}
+
+.preview-bars span{
+  flex:1;
+  background:#2686c9;
+  border-radius:2px 2px 0 0;
+}
+
+.preview-bars span:nth-child(1){height:40%}
+.preview-bars span:nth-child(2){height:70%}
+.preview-bars span:nth-child(3){height:53%}
+.preview-bars span:nth-child(4){height:88%}
+.preview-bars span:nth-child(5){height:65%}
+
+.demo-badge{
+  position:absolute;
+  left:9px;
+  top:8px;
+  z-index:2;
+  background:#0868bd;
+  color:#fff;
+  padding:4px 8px;
+  border-radius:4px;
+  font-size:10px;
+  font-weight:bold;
+}
+
+.project-body{
+  padding:12px 13px 15px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.project-body h3{
+  margin:0 0 6px;
+  color:var(--navy);
+  font-size:14px;
+  line-height:1.3;
+}
+
+.project-body p{
+  margin:0;
+  color:#314862;
+  font-size:12px;
+  line-height:1.45;
+  flex:1;
+}
+
+.project-body a{
+  font-size:12px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-top:12px;
+}
+
+.project-body a:hover{
+  text-decoration:underline;
+}
+
+/* LOWER SECTIONS */
+
+.lower-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+}
+
+.about{
+  color:white;
+  padding:43px max(5%,calc((100vw - 1390px)/2)) 50px 6%;
+  background:
+    linear-gradient(
+      rgba(9,36,65,.91),
+      rgba(9,36,65,.94)
+    ),
+    url("real-estate-bg.jpg")
+    center/cover no-repeat;
+}
+
+.about .section-title{
+  color:white;
+}
+
+.about p{
+  max-width:700px;
+  color:#e2ebf4;
+  font-size:14px;
+}
+
+.experience{
+  background:#f7faff;
+  padding:43px 6% 50px;
+}
+
+.timeline{
+  border-left:2px solid #1672ca;
+  padding-left:20px;
+  margin-left:10px;
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:23px;
+}
+
+.timeline-item:before{
+  content:"";
+  position:absolute;
+  left:-27px;
+  top:6px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#0872ce;
+}
+
+.timeline-item h3{
+  margin:0 0 4px;
+  font-size:15px;
+  color:var(--navy);
+}
+
+.timeline-item .date{
+  color:#3b5a7b;
+  font-size:13px;
+  margin-bottom:6px;
+}
+
+.timeline-item p{
+  color:#304b66;
+  font-size:13px;
+  margin:0;
+}
+
+.education{
+  border-top:1px solid #dce5ef;
+  padding-top:18px;
+  margin-top:20px;
+}
+
+.education h3{
+  color:var(--navy);
+  margin:0 0 6px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#0c2949;
+  color:white;
+  padding:48px 5%;
+  text-align:center;
+}
+
+.contact h2{
+  font-size:30px;
+  margin:0 0 15px;
+}
+
+.contact p{
+  color:#d7e6f4;
+}
+
+.contact a:not(.btn){
+  color:#c9e4ff;
+}
+
+.contact .btn{
+  margin-top:15px;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.contact .btn-outline{
+  background:white;
+  color:var(--navy);
+}
+
+/* FOOTER */
+
+footer{
+  background:#081d35;
+  color:#c1d0df;
+  padding:20px;
+  text-align:center;
+  font-size:12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1150px){
+  .hero-grid{
+    grid-template-columns:1.3fr .75fr;
+  }
+
+  .services-panel{
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .project-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:800px){
+  .nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:14px 0;
+  }
+
+  .navlinks{
+    justify-content:center;
+    gap:14px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .portrait{
+    width:min(290px,100%);
+    margin:auto;
+  }
+
+  .services-panel{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .project-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .lower-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about,.experience{
+    padding:38px 6%;
+  }
+}
+
+@media(max-width:520px){
+  .hero{
+    padding:35px 0;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero-buttons,
+  .contact-buttons{
+    flex-direction:column;
+  }
+
+  .hero-buttons .btn,
+  .contact-buttons .btn{
+    width:100%;
+  }
+
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-preview{
+    height:150px;
+  }
+
+  .project-heading{
+    display:block;
+  }
+
+  .project-note{
+    display:none;
+  }
+
+  .services-panel{
+    grid-template-columns:1fr;
+  }
+
+  .nav-cta{
+    width:100%;
+    text-align:center;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.project-card{transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <nav class="nav container">
+
+    <a class="brand" href="#home">
+      Yves Chester V. Ybanez
+      <small>Real Estate Virtual Assistant</small>
+    </a>
+
+    <div class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a class="nav-cta"
+       href="mailto:ybanez.yveschester@gmail.com">
+      ✉ Let's Connect
+    </a>
+
+  </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">
+        Real Estate Virtual Assistant
+      </div>
+
+      <h1>Yves Chester V. Ybanez</h1>
+
+      <h2>
+        Organized leads. Clear follow-ups.
+        Reliable sales support.
+      </h2>
+
+      <p>
+        A Philippines-based professional transitioning
+        into Real Estate Virtual Assistant work,
+        bringing 16 years of sales and operations
+        experience in client relationships,
+        lead follow-up, financing coordination,
+        and reporting.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#projects">
+          ▣ Explore My Work
+        </a>
+
+        <a class="btn btn-outline"
+           href="mailto:ybanez.yveschester@gmail.com">
+          ✉ Contact Me
+        </a>
+
+        <!-- DOWNLOADABLE CV -->
+        <a class="btn btn-cv"
+           href="Yves-Chester-Ybanez-CV.pdf"
+           download="Yves-Chester-Ybanez-CV.pdf"
+           type="application/pdf">
+          ↓ Download My CV (PDF)
+        </a>
+      </div>
+    </div>
+
+    <div class="portrait">
+      <img
+        src="profile-photo.png"
+        alt="Professional portrait of Yves Chester V. Ybanez"
+        width="300"
+        height="330"
+      >
+    </div>
+
+    <div class="services-panel" id="skills">
+      <div class="service">
+        <span class="service-icon">⌂</span>
+        Lead Management
+      </div>
+
+      <div class="service">
+        <span class="service-icon">♙</span>
+        CRM & Pipeline Support
+      </div>
+
+      <div class="service">
+        <span class="service-icon">▤</span>
+        Transaction Coordination
+      </div>
+
+      <div class="service">
+        <span class="service-icon">▥</span>
+        Sales Reporting
+      </div>
+
+      <div class="service">
+        <span class="service-icon">▦</span>
+        Client Communication
+      </div>
+
+      <div class="service">
+        <span class="service-icon">⚙</span>
+        Marketing Support
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INTERACTIVE PORTFOLIO PROJECTS -->
+
+<section class="projects" id="projects">
+  <div class="container">
+
+    <div class="project-heading">
+      <div>
+        <h2 class="section-title">
+          Interactive Portfolio Projects
+        </h2>
+
+        <p>
+          Explore five interactive real estate workflow
+          demo projects demonstrating CRM management,
+          property analysis, transaction coordination,
+          lead follow-ups, and sales reporting.
+          All projects use fictional sample data.
+        </p>
+      </div>
+
+      <div class="project-note">
+        Real Support
+        for Real Results
+      </div>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 1 -->
+      <article class="project-card">
+        <div class="project-preview">
+          <span class="demo-badge">Demo Project</span>
+          <div class="preview-ui">
+            <div class="preview-sidebar"></div>
+            <div class="preview-content">
+              <div class="preview-bars">
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <h3>Real Estate CRM Pro</h3>
+          <p>
+            Interactive lead management system with
+            pipeline stages, follow-ups, appointments,
+            tasks, and reports.
+          </p>
+          <a href="https://revacrm.netlify.app/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Explore CRM Dashboard →
+          </a>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project-card">
+        <div class="project-preview">
+          <span class="demo-badge">Demo Project</span>
+          <div class="preview-ui">
+            <div class="preview-sidebar"></div>
+            <div class="preview-content">
+              <div class="preview-bars">
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <h3>Real Estate Comps Calculator</h3>
+          <p>
+            Property comparison and valuation support
+            tool demonstrating comparable sales analysis.
+          </p>
+          <a href="https://ycycomps.netlify.app/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Explore Comps Calculator →
+          </a>
+        </div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project-card">
+        <div class="project-preview">
+          <span class="demo-badge">Demo Project</span>
+          <div class="preview-ui">
+            <div class="preview-sidebar"></div>
+            <div class="preview-content">
+              <div class="preview-bars">
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <h3>Transaction Coordinator</h3>
+          <p>
+            Contract-to-closing tracking system
+            with milestone checklists, deadline
+            monitoring, and transaction organization.
+          </p>
+          <a href="https://revatc.netlify.app/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Explore Transaction Coordinator →
+          </a>
+        </div>
+      </article>
+
+      <!-- PROJECT 4 -->
+      <article class="project-card">
+        <div class="project-preview">
+          <span class="demo-badge">Demo Project</span>
+          <div class="preview-ui">
+            <div class="preview-sidebar"></div>
+            <div class="preview-content">
+              <div class="preview-bars">
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <h3>Sales & Marketing Reports</h3>
+          <p>
+            Reporting dashboard displaying lead
+            sources, pipeline activity, conversion
+            metrics, and weekly performance.
+          </p>
+          <a href="https://revasr.netlify.app/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Explore Sales Reports →
+          </a>
+        </div>
+      </article>
+
+      <!-- PROJECT 5 -->
+      <article class="project-card">
+        <div class="project-preview">
+          <span class="demo-badge">Demo Project</span>
+          <div class="preview-ui">
+            <div class="preview-sidebar"></div>
+            <div class="preview-content">
+              <div class="preview-bars">
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body">
+          <h3>Lead Follow-Up & Scheduler</h3>
+          <p>
+            Follow-up management with appointment
+            scheduling, qualification checklists,
+            communication templates, and tracking.
+          </p>
+          <a href="https://revafs.netlify.app/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Explore Follow-Up Scheduler →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT AND EXPERIENCE -->
+
+<div class="lower-grid">
+
+  <section class="about" id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+      My professional background includes automotive
+      and FMCG sales operations, prospecting,
+      customer follow-up, sales reporting,
+      and team leadership.
+    </p>
+
+    <p>
+      I'm applying these transferable skills to
+      remote real estate support roles, focusing
+      on CRM organization, lead management,
+      transaction tracking, and administrative
+      coordination.
+    </p>
+
+    <p>
+      I've created interactive portfolio projects
+      to demonstrate how I approach common real
+      estate workflows. These projects use fictional
+      data and are not presented as previous
+      US real estate client engagements.
+    </p>
+  </section>
+
+  <section class="experience" id="experience">
+    <h2 class="section-title">
+      Professional Experience
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h3>
+          Sales Team Leader —
+          Autopremium Inc. (Ford Bohol)
+        </h3>
+        <div class="date">
+          August 2024 – April 2026
+        </div>
+        <p>
+          Led a team of 10 sales consultants,
+          coordinated with financing and insurance
+          partners, supported lead generation,
+          and monitored customer follow-up
+          and sales operations.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>
+          Sales Consultant —
+          Autopremium Inc. (Ford Bohol)
+        </h3>
+        <div class="date">
+          2017 – 2024
+        </div>
+        <p>
+          Handled prospecting, customer inquiries,
+          quotations, financing documentation,
+          sales coordination, and after-sales relationships.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>
+          Sales Roles —
+          DRANIX Distributor Inc.
+        </h3>
+        <div class="date">
+          2010 – 2017
+        </div>
+        <p>
+          Sales personnel and junior supervisory
+          responsibilities involving customer relationships,
+          reporting, and field sales operations.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="education">
+      <h3>Education</h3>
+      <p>
+        Bachelor of Science in Customs Administration —
+        PMI Colleges Bohol
+      </p>
+    </div>
+
+  </section>
+</div>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+  <h2>Let's Connect</h2>
+
+  <p>
+    I'm interested in remote Real Estate Virtual
+    Assistant opportunities supporting US real
+    estate professionals and teams.
+  </p>
+
+  <p>
+    Email:
+    <a href="mailto:ybanez.yveschester@gmail.com">
+      ybanez.yveschester@gmail.com
+    </a>
+  </p>
+
+  <div class="contact-buttons">
+
+    <a class="btn btn-primary"
+       href="mailto:ybanez.yveschester@gmail.com?subject=Real%20Estate%20Virtual%20Assistant%20Opportunity">
+      ✉ Send an Email
+    </a>
+
+    <!-- DOWNLOADABLE CV -->
+    <a class="btn btn-outline"
+       href="Yves-Chester-Ybanez-CV.pdf"
+       download="Yves-Chester-Ybanez-CV.pdf"
+       type="application/pdf">
+      ↓ Download My CV (PDF)
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Yves Chester V. Ybanez •
+  Real Estate Virtual Assistant Portfolio
+</footer>
+
+</body>
+</html>
